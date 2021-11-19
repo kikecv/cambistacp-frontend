@@ -1,0 +1,47 @@
+<form [formGroup]="form" (ngSubmit)="saveTipoCambio($event)">
+    <mat-card>
+        <mat-card-header>
+            <mat-card-title>Tipo de Cambio Diario</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <div class="row">
+                <div class="col-xs">
+                    <mat-form-field appearance="fill">
+                        <mat-label>Id</mat-label>
+                        <input matInput formControlName="id" type="number" readonly>
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs">
+                    <mat-form-field appearance="fill">
+                        <mat-label>Moneda</mat-label>
+                        <input matInput formControlName="moneda" type="text" readonly>
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs">
+                    <mat-form-field appearance="fill">
+                        <mat-label>Valor de venta</mat-label>
+                        <input matInput formControlName="tcventa" type="number" step="0.001" class="example-right-align">
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs">
+                    <mat-form-field appearance="fill">
+                        <mat-label>Valor de compra</mat-label>
+                        <input matInput formControlName="tccompra" type="number" step="0.001" class="example-right-align">
+                    </mat-form-field>
+                </div>
+            </div>
+        </mat-card-content>
+        <mat-card-actions>
+            <button mat-raised-button [disabled]="form.invalid" type="submit">Guardar</button>
+        </mat-card-actions>
+
+
+    </mat-card>
+</form>
+
