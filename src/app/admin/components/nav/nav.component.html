@@ -13,21 +13,16 @@
     <mat-nav-list>
 
       <a mat-list-item routerLink="/admin/tipocambiodiario">
-        <mat-icon mat-list-icon>currency_exchange</mat-icon><div mat-line>Tipo cambio</div>
+        <mat-icon mat-list-icon>currency_exchange</mat-icon>
+        <div mat-line>Tipo cambio</div>
       </a>
-      <a mat-list-item>
-        <mat-icon mat-list-icon>account_circle</mat-icon>
-        <div mat-line>Usuarios</div>
-      </a>
-      <a mat-list-item>
-        <mat-icon mat-list-icon>close</mat-icon>
+      <a mat-list-item (click)="logout()">
+        <mat-icon mat-list-icon>logout</mat-icon>
         <div mat-line>Cerrar sesión</div>
       </a>
-
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
-
     <router-outlet></router-outlet>
   </mat-sidenav-content>
 </mat-sidenav-container>
