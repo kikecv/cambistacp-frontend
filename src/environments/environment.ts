@@ -5,6 +5,14 @@
 export const environment = {
   production: false,
   url_api:'http://localhost:8080/api',
+  firebase : {
+    apiKey: "AIzaSyD7Oib5G5RpoQmbfcKeiYl3jR8G6PP-L7E",
+    authDomain: "cambistacp-bce10.firebaseapp.com",
+    projectId: "cambistacp-bce10",
+    storageBucket: "cambistacp-bce10.appspot.com",
+    messagingSenderId: "448955246348",
+    appId: "1:448955246348:web:c79821c6aab069a8c20b29"
+  }
 
 };
 

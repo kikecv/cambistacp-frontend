@@ -8,6 +8,10 @@ import { CoreModule } from './core/core.module';
 import { LayoutComponent } from './layout/layout.component';
 import { SharedModule } from './shared/shared.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFireAuthModule } from '@angular/fire/compat/auth';
+
+import { environment } from '../environments/environment';
 
 
 @NgModule({
@@ -21,8 +25,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     SharedModule,
     CoreModule,
     BrowserAnimationsModule,
-    HttpClientModule
-    
+    HttpClientModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireAuthModule
 
   ],
   providers: [],
